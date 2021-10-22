@@ -45,10 +45,17 @@ li {
 }
 
 .calc-container {
+  display: flex;
+  padding: 30px;
+}
+.nbre-container {
   margin: 5%;
   display: flex;
   justify-content: center;
   width: 300px;
+}
+.result-container {
+  margin: 10%;
 }
 
 .calc-btn {

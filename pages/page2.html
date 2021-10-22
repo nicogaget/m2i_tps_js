@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../style.css" />
     <title>Document</title>
-    <script src="../script/calculatrice.js"></script>
+    <script src="../script/calculatrice.js" async></script>
   </head>
   <body>
     <nav class="navbar">
@@ -24,8 +24,8 @@
       </ul>
     </nav>
 
-    <main>
-      <div class="calc-container">
+    <main class="calc-container">
+      <div class="nbre-container">
         <div class="formulaire">
           <form action="">
             <input class="calc-btn" type="button" value="1" onclick="edit(1)" />
@@ -45,25 +45,25 @@
             class="calc-btn"
             type="button"
             value="+"
-            onclick="addition(nbr1, nbr2)"
+            onclick='operande("+")'
           />
           <input
             class="calc-btn"
             type="button"
             value="-"
-            onclick="soustraction(nbr1, nbr2)"
+            onclick='operande("-")'
           />
           <input
             class="calc-btn"
             type="button"
-            value="x"
-            onclick="multiplication(nbr1, nbr2)"
+            value="*"
+            onclick='operande("*")'
           />
           <input
             class="calc-btn"
             type="button"
             value="/"
-            onclick="division(nbr1, nbr2)"
+            onclick='operande("/")'
           />
           <input
             class="calc-btn"
@@ -71,21 +71,33 @@
             value="="
             onclick="resultat()"
           />
+          <input class="calc-btn" type="button" value="C" onclick="reset()" />
         </div>
       </div>
-      <div>
-        <label for=""
-          >Saisie<input type="number" placeholder="" name="saisie" id="saisie"
-        /></label>
-      </div>
-      <div>
-        <label for=""
-          >Resultat<input
+      <div class="result-container">
+        <div>
+          <label for="">Saisie</label>
+          <input
             type="number"
+            style="font-size: 30px"
+            placeholder=""
+            name="saisie"
+            id="saisie"
+          />
+        </div>
+        <div>
+          <input type="text" hidden placeholder="" name="ope" id="ope" />
+        </div>
+        <div>
+          <label for="">Resultat</label>
+          <input
+            type="number"
+            style="font-size: 30px"
             placeholder=""
             name="resultat"
             id="resultat"
-        /></label>
+          />
+        </div>
       </div>
     </main>
   </body>
