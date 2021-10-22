@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+    <script src="../script/calculatrice.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-container">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html"> Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page1.html">Fais tourner!!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page2.html">Calculatrice</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="calc-container">
+        <div class="formulaire">
+          <form action="">
+            <input class="calc-btn" type="button" value="1" onclick="edit(1)" />
+            <input class="calc-btn" type="button" value="2" onclick="edit(2)" />
+            <input class="calc-btn" type="button" value="3" onclick="edit(3)" />
+            <input class="calc-btn" type="button" value="4" onclick="edit(4)" />
+            <input class="calc-btn" type="button" value="5" onclick="edit(5)" />
+            <input class="calc-btn" type="button" value="6" onclick="edit(6)" />
+            <input class="calc-btn" type="button" value="7" onclick="edit(7)" />
+            <input class="calc-btn" type="button" value="8" onclick="edit(8)" />
+            <input class="calc-btn" type="button" value="9" onclick="edit(9)" />
+            <input class="calc-btn" type="button" value="0" onclick="edit(0)" />
+          </form>
+        </div>
+        <div class="operande">
+          <input
+            class="calc-btn"
+            type="button"
+            value="+"
+            onclick="addition(nbr1, nbr2)"
+          />
+          <input
+            class="calc-btn"
+            type="button"
+            value="-"
+            onclick="soustraction(nbr1, nbr2)"
+          />
+          <input
+            class="calc-btn"
+            type="button"
+            value="x"
+            onclick="multiplication(nbr1, nbr2)"
+          />
+          <input
+            class="calc-btn"
+            type="button"
+            value="/"
+            onclick="division(nbr1, nbr2)"
+          />
+          <input
+            class="calc-btn"
+            type="button"
+            value="="
+            onclick="resultat()"
+          />
+        </div>
+      </div>
+      <div>
+        <label for=""
+          >Saisie<input type="number" placeholder="" name="saisie" id="saisie"
+        /></label>
+      </div>
+      <div>
+        <label for=""
+          >Resultat<input
+            type="number"
+            placeholder=""
+            name="resultat"
+            id="resultat"
+        /></label>
+      </div>
+    </main>
+  </body>
+</html>
